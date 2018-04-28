@@ -6,3 +6,8 @@ services:
     volumes:
       - ./:/app
     working_dir: /app
+    command: puma
+    ports:
+      - 3000:3000
+  db:
+    image: postgres:10.3-alpine
